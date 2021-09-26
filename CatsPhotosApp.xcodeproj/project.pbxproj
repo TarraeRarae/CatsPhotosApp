@@ -15,6 +15,7 @@
 		1F1DA48E2700911300757C9E /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DA48D2700911300757C9E /* UploadViewController.swift */; };
 		1F1DA491270092AC00757C9E /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DA490270092AC00757C9E /* TableCell.swift */; };
 		1F1DA494270092CE00757C9E /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DA493270092CE00757C9E /* TableCell.xib */; };
+		1F1DA49C270108A300757C9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DA49B270108A300757C9E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1F1DA48D2700911300757C9E /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		1F1DA490270092AC00757C9E /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		1F1DA493270092CE00757C9E /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		1F1DA49B270108A300757C9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,11 @@
 		1F1DA46A26FF8C1C00757C9E /* CatsPhotosApp */ = {
 			isa = PBXGroup;
 			children = (
+				1F1DA49B270108A300757C9E /* Constants.swift */,
 				1F1DA46B26FF8C1C00757C9E /* AppDelegate.swift */,
 				1F1DA46F26FF8C1C00757C9E /* SearchViewController.swift */,
-				1F1DA48626FF970400757C9E /* FavoriteViewController.swift */,
 				1F1DA48D2700911300757C9E /* UploadViewController.swift */,
+				1F1DA48626FF970400757C9E /* FavoriteViewController.swift */,
 				1F1DA490270092AC00757C9E /* TableCell.swift */,
 				1F1DA493270092CE00757C9E /* TableCell.xib */,
 				1F1DA47426FF8C2400757C9E /* Assets.xcassets */,
@@ -169,6 +172,7 @@
 				1F1DA48E2700911300757C9E /* UploadViewController.swift in Sources */,
 				1F1DA47026FF8C1C00757C9E /* SearchViewController.swift in Sources */,
 				1F1DA46C26FF8C1C00757C9E /* AppDelegate.swift in Sources */,
+				1F1DA49C270108A300757C9E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

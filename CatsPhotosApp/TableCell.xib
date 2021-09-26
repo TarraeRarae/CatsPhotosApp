@@ -8,28 +8,30 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCellID" rowHeight="200" id="7HJ-18-3GW" customClass="TableCell" customModule="CatsPhotosApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="406" height="200"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCellID" rowHeight="50" id="7HJ-18-3GW" customClass="TableCell" customModule="CatsPhotosApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7HJ-18-3GW" id="iuO-qQ-3Hz">
-                <rect key="frame" x="0.0" y="0.0" width="406" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="406" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-a1-bfA">
-                        <rect key="frame" x="5" y="11" width="396" height="178"/>
-                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7g-FT-NiK">
+                        <rect key="frame" x="20" y="15" width="366" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="F7g-FT-NiK" firstAttribute="top" secondItem="iuO-qQ-3Hz" secondAttribute="top" constant="15" id="QPE-wG-OBz"/>
+                    <constraint firstItem="F7g-FT-NiK" firstAttribute="width" secondItem="iuO-qQ-3Hz" secondAttribute="width" multiplier="0.901478" id="Z6A-B8-GjA"/>
+                    <constraint firstAttribute="trailing" secondItem="F7g-FT-NiK" secondAttribute="trailing" constant="20" symbolic="YES" id="nmE-4a-hnV"/>
+                </constraints>
             </tableViewCellContentView>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="PaV-a1-bfA" secondAttribute="bottom" constant="11" id="04j-nI-gSq"/>
-                <constraint firstItem="PaV-a1-bfA" firstAttribute="top" secondItem="7HJ-18-3GW" secondAttribute="top" constant="11" id="7Ed-OM-BgS"/>
-                <constraint firstItem="PaV-a1-bfA" firstAttribute="leading" secondItem="7HJ-18-3GW" secondAttribute="leading" constant="5" id="DYX-km-xee"/>
-                <constraint firstAttribute="trailing" secondItem="PaV-a1-bfA" secondAttribute="trailing" constant="5" id="iBM-fk-yQf"/>
-            </constraints>
             <connections>
-                <outlet property="cellImage" destination="PaV-a1-bfA" id="IV4-gC-2NV"/>
+                <outlet property="cellLabel" destination="F7g-FT-NiK" id="dDn-nd-tkp"/>
             </connections>
-            <point key="canvasLocation" x="-37.681159420289859" y="16.741071428571427"/>
+            <point key="canvasLocation" x="-37.681159420289859" y="-33.482142857142854"/>
         </tableViewCell>
     </objects>
 </document>

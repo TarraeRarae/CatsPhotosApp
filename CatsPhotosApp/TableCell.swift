@@ -8,17 +8,22 @@
 import UIKit
 
 class TableCell: UITableViewCell {
-	@IBOutlet private var cellImage: UIImageView!
+	@IBOutlet private var cellLabel: UILabel!
+
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		backgroundColor = .white
+		cellLabel.textAlignment = .center
 	}
 	override func prepareForReuse() {
-			super.prepareForReuse()
-			cellImage.image = nil
+		super.prepareForReuse()
+		cellLabel.text = ""
 	}
+	func setText(_ text: String) {
+		cellLabel.text = text
+	}
+}
 
-	func setImage(_ image: UIImage?) {
-		cellImage.image = image
-	}
+struct TableCellContent {
+	static let arrayOfTexts = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 }
