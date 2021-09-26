@@ -7,11 +7,10 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FavoriteViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .white
 		navigationItem.title = "Favorites"
-//		navigationController?.navigationBar.prefersLargeTitles = trues
 	}
 }

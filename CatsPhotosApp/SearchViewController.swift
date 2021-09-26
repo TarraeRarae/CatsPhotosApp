@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
+	private let tableView: UITableView = UITableView(frame: CGRect.zero, style: .plain)
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .white
 		navigationItem.title = "Random cats"
-//		navigationController?.navigationBar.prefersLargeTitles = true
 	}
 }
