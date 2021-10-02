@@ -9,6 +9,6 @@ import UIKit
 
 struct Constants {
 	static let rowHeight: CGFloat = 50.0
-	static let cellID: String = "TableCellID"
-	static let nibName: String = "TableCell"
+	static let cellID: String = "TableViewCellID"
+	static let nibName: String = "TableViewCell"
 }

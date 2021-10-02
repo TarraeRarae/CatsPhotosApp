@@ -31,10 +31,12 @@ extension UploadViewController: UITableViewDataSource {
 		return TableCellContent.arrayOfTexts.count
 	}
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellID, for: indexPath) as? TableCell else {
+		guard let cell = tableView.dequeueReusableCell(
+						withIdentifier: Constants.cellID,
+						for: indexPath) as? TableViewCell else {
 			fatalError("Unable to dequeue reusable cell")
 		}
-		cell.setText(TableCellContent.arrayOfTexts[indexPath.row])
+		
 		return cell
 	}
 }
