@@ -36,7 +36,6 @@ extension UploadViewController: UITableViewDataSource {
 						for: indexPath) as? TableViewCell else {
 			fatalError("Unable to dequeue reusable cell")
 		}
-		
 		return cell
 	}
 }
