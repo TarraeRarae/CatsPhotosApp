@@ -8,6 +8,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+
 	private var tableView: UITableView = UITableView()
 	private var network: NetworkManager = NetworkManager()
 	private var tasks: [URLSessionDataTask] = []
@@ -17,7 +18,7 @@ class SearchViewController: UIViewController {
 		view.backgroundColor = .white
 		navigationItem.title = "Random cats"
 		network.delegate = self
-		network.getImageWithFilter("abys")
+		network.getImageWithFilter("beng")
 		setupTableView()
 	}
 
@@ -30,17 +31,21 @@ class SearchViewController: UIViewController {
 		tableView.delegate = self
 		view.addSubview(tableView)
 	}
+
 	deinit {
 			tasks.forEach({
 					$0.cancel()
 			})
 	}
+
 }
 
 extension SearchViewController: UITableViewDataSource {
+
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return TableCellData.arrayOfCatsData.count
 	}
+
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(
 						withIdentifier: Constants.cellID,
@@ -52,29 +57,40 @@ extension SearchViewController: UITableViewDataSource {
 						let dataActual = data,
 						let image = UIImage(data: dataActual)
 			else {
-					return
+				return
 			}
 			DispatchQueue.main.async {
 				cell.setImage(image)
 			}
 		}
-		task.resume()
 		tasks.append(task)
+		task.resume()
 		return cell
 	}
+
 }
 
 extension SearchViewController: UITableViewDelegate {
+
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return Constants.rowHeight
 	}
+
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		let catPhotoVC = CatsPhotoViewController(TableCellData.arrayOfCatsData[indexPath.row])
+		show(catPhotoVC, sender: nil)
+	}
+
 }
 
 extension SearchViewController: NetworkCatsManagerDelegate {
+
 	func updateInterface(_: NetworkManager, with catsPhotosArray: [CatsPhotos]) {
 		TableCellData.arrayOfCatsData = catsPhotosArray
 		DispatchQueue.main.async {
 			self.tableView.reloadData()
 		}
 	}
+
 }

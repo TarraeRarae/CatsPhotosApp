@@ -19,6 +19,7 @@
 		1F1DA494270092CE00757C9E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DA493270092CE00757C9E /* TableViewCell.xib */; };
 		1F1DA49C270108A300757C9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DA49B270108A300757C9E /* Constants.swift */; };
 		1F3E966E2708F91500611AA6 /* CatsPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E966D2708F91500611AA6 /* CatsPhotos.swift */; };
+		1F3E9672270A3CCF00611AA6 /* CatsPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E9671270A3CCF00611AA6 /* CatsPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1F1DA493270092CE00757C9E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		1F1DA49B270108A300757C9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1F3E966D2708F91500611AA6 /* CatsPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsPhotos.swift; sourceTree = "<group>"; };
+		1F3E9671270A3CCF00611AA6 /* CatsPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,7 @@
 			children = (
 				1F12372A270876440057E43B /* Model */,
 				1FFF49CE2707AA3200D080DF /* Support */,
-				1FFF49CD2707AA2300D080DF /* TableViewCellFiles */,
+				1FFF49CD2707AA2300D080DF /* TableViewCell */,
 				1FFF49CB2707A9FF00D080DF /* Controllers */,
 				1F1DA47426FF8C2400757C9E /* Assets.xcassets */,
 				1F1DA47626FF8C2400757C9E /* LaunchScreen.storyboard */,
@@ -95,17 +97,18 @@
 				1F1DA46F26FF8C1C00757C9E /* SearchViewController.swift */,
 				1F1DA48D2700911300757C9E /* UploadViewController.swift */,
 				1F1DA48626FF970400757C9E /* FavoriteViewController.swift */,
+				1F3E9671270A3CCF00611AA6 /* CatsPhotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		1FFF49CD2707AA2300D080DF /* TableViewCellFiles */ = {
+		1FFF49CD2707AA2300D080DF /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				1F1DA490270092AC00757C9E /* TableViewCell.swift */,
 				1F1DA493270092CE00757C9E /* TableViewCell.xib */,
 			);
-			path = TableViewCellFiles;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		1FFF49CE2707AA3200D080DF /* Support */ = {
@@ -127,7 +130,7 @@
 				1F1DA46426FF8C1C00757C9E /* Sources */,
 				1F1DA46526FF8C1C00757C9E /* Frameworks */,
 				1F1DA46626FF8C1C00757C9E /* Resources */,
-				1F1DA48426FF8D9800757C9E /* ShellScript */,
+				1F1DA48426FF8D9800757C9E /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -184,7 +187,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F1DA48426FF8D9800757C9E /* ShellScript */ = {
+		1F1DA48426FF8D9800757C9E /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -193,6 +196,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -208,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3E9672270A3CCF00611AA6 /* CatsPhotoViewController.swift in Sources */,
 				1F1DA491270092AC00757C9E /* TableViewCell.swift in Sources */,
 				1F12372C270876580057E43B /* CatsPhotosData.swift in Sources */,
 				1F3E966E2708F91500611AA6 /* CatsPhotos.swift in Sources */,

@@ -8,18 +8,21 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+
 	@IBOutlet private var cellImageView: UIImageView?
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		backgroundColor = .white
 	}
+
 	override func prepareForReuse() {
 		super.prepareForReuse()
-		self.cellImageView = nil
+		self.cellImageView?.image = nil
 	}
+
 	func setImage(_ image: UIImage?) {
-			cellImageView?.image = image
+		cellImageView?.image = image
 	}
 }
 
