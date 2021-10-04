@@ -8,21 +8,24 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-	@IBOutlet private var cellImageView: UIImageView!
+
+	@IBOutlet private var cellImageView: UIImageView?
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		backgroundColor = .white
 	}
+
 	override func prepareForReuse() {
 		super.prepareForReuse()
-		self.cellImageView = nil
+		self.cellImageView?.image = nil
 	}
+
 	func setImage(_ image: UIImage?) {
-		cellImageView.image = image
+		cellImageView?.image = image
 	}
 }
 
-struct TableCellContent {
-	static let arrayOfTexts = ["/Users/aleksej/Downloads/test.png"]
+struct TableCellData {
+	static var arrayOfCatsData: [CatsPhotos] = []
 }
