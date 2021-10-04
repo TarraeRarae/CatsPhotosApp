@@ -27,5 +27,7 @@ class TableViewCell: UITableViewCell {
 }
 
 struct TableCellData {
+
 	static var arrayOfCatsData: [CatsPhotos] = []
+
 }

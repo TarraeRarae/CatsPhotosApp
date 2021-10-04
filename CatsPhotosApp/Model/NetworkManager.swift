@@ -8,10 +8,13 @@
 import Foundation
 
 protocol NetworkCatsManagerDelegate: class {
+
 	func updateInterface(_: NetworkManager, with catsPhotosArray: [CatsPhotos])
+
 }
 
 class NetworkManager {
+
 	weak var delegate: NetworkCatsManagerDelegate?
 
 	func getImageWithFilter(_ breed: String) {
@@ -43,4 +46,5 @@ class NetworkManager {
 		}
 		return nil
 	}
+
 }
