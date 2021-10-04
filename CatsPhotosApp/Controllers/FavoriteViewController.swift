@@ -8,13 +8,16 @@
 import UIKit
 
 class FavoriteViewController: UIViewController {
+
 	private var tableView: UITableView = UITableView()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .white
 		navigationItem.title = "Favorites"
 		setupTableView()
 	}
+
 	func setupTableView() {
 		tableView = UITableView(frame: view.bounds, style: .plain)
 		tableView.register(UINib(nibName: Constants.nibName, bundle: nil), forCellReuseIdentifier: Constants.cellID)
@@ -27,9 +30,11 @@ class FavoriteViewController: UIViewController {
 }
 
 extension FavoriteViewController: UITableViewDataSource {
+
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 1
 	}
+
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(
 					withIdentifier: Constants.cellID,
@@ -38,10 +43,13 @@ extension FavoriteViewController: UITableViewDataSource {
 		}
 		return cell
 	}
+
 }
 
 extension FavoriteViewController: UITableViewDelegate {
+
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return Constants.rowHeight
 	}
+
 }
