@@ -8,22 +8,28 @@
 import UIKit
 
 class CatsPhotoViewController: UIViewController {
+
 	private var currentCatPhotoData: CatsPhotos
 	private var breedLabel: UILabel = UILabel()
 	private var catImageView: UIImageView = UIImageView()
+
 	init(_ currentCatPhotoData: CatsPhotos) {
 		self.currentCatPhotoData = currentCatPhotoData
 		super.init(nibName: nil, bundle: nil)
 	}
+
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .white
+		navigationItem.title = currentCatPhotoData.name
 		setupBreedLabel()
 		setupCatImageView()
 	}
+
 	func setupBreedLabel() {
 		breedLabel.text = currentCatPhotoData.breed
 		breedLabel.frame = CGRect(
@@ -34,6 +40,7 @@ class CatsPhotoViewController: UIViewController {
 		)
 		view.addSubview(breedLabel)
 	}
+
 	func setupCatImageView() {
 		catImageView.frame = CGRect(
 			x: Double(view.bounds.width) * 0.1,
@@ -55,4 +62,5 @@ class CatsPhotoViewController: UIViewController {
 		task.resume()
 		view.addSubview(catImageView)
 	}
+
 }
