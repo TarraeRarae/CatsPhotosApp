@@ -34,7 +34,8 @@ class CatsPhotoViewController: UIViewController {
 	}
 
 	func setupBreedLabel() {
-		breedLabel.text = currentCatPhotoData.breed
+		breedLabel.text = "Breed:\n- \(currentCatPhotoData.breed)"
+		breedLabel.numberOfLines = 2
 		breedLabel.textAlignment = .left
 		breedLabel.font = UIFont(name: "Times New Roman", size: 30)
 		view.addSubview(breedLabel)
