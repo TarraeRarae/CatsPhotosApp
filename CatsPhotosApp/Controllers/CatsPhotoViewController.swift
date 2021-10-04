@@ -13,7 +13,6 @@ class CatsPhotoViewController: UIViewController {
 	private var breedLabel: UILabel = UILabel()
 	private var catImageView: UIImageView = UIImageView()
 	private var favoriteButton: UIButton = UIButton()
-	private var scrollView: UIScrollView = UIScrollView()
 
 	init(_ currentCatPhotoData: CatsPhotos) {
 		self.currentCatPhotoData = currentCatPhotoData
@@ -34,19 +33,10 @@ class CatsPhotoViewController: UIViewController {
 		setupConstraints()
 	}
 
-	func setupScrollView() {
-		scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-		scrollView.addSubview(catImageView)
-	}
-
 	func setupBreedLabel() {
 		breedLabel.text = currentCatPhotoData.breed
-//		breedLabel.frame = CGRect(
-//			x: Double(view.bounds.width) * 0.15,
-//			y: Double(view.bounds.height) * 0.75,
-//			width: Double(view.bounds.width) * 0.5,
-//			height: 50
-//		)
+		breedLabel.textAlignment = .left
+		breedLabel.font = UIFont(name: "Times New Roman", size: 30)
 		view.addSubview(breedLabel)
 	}
 
@@ -67,33 +57,32 @@ class CatsPhotoViewController: UIViewController {
 	}
 
 	func setupFavoriteButton() {
-		favoriteButton.frame = CGRect(
-			x: Double(view.bounds.width) * 0.15,
-			y: Double(view.bounds.height) * 0.5,
-			width: 70,
-			height: 70
-		)
 		favoriteButton.setImage(UIImage(systemName: "suit.heart"), for: .normal)
+		favoriteButton.setImage(UIImage(systemName: "suit.heart.fill"), for: .selected)
 		favoriteButton.contentHorizontalAlignment = .fill
 		favoriteButton.contentVerticalAlignment = .fill
-		favoriteButton.imageEdgeInsets = UIEdgeInsets(top: 20, left: 6, bottom: 10, right: 10)
-
+		favoriteButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 		view.addSubview(favoriteButton)
 	}
+//	func makeImageFavorite() {
+//
+//	}
 	func setupConstraints() {
 		setBreedLabelConstraints()
 		setCatImageViewConstraints()
+		setFavoriteButtonConstraints()
 	}
 
 	func setBreedLabelConstraints() {
 		breedLabel.translatesAutoresizingMaskIntoConstraints = false
 		NSLayoutConstraint.activate([
-			breedLabel.topAnchor.constraint(equalTo: catImageView.bottomAnchor, constant: 100),
-			breedLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-			breedLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 42),
-			breedLabel.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor)
+			breedLabel.topAnchor.constraint(equalTo: favoriteButton.bottomAnchor, constant: 10),
+			breedLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 42),
+			breedLabel.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.8),
+			breedLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3)
 		])
 	}
+
 	func setCatImageViewConstraints() {
 		catImageView.translatesAutoresizingMaskIntoConstraints = false
 		NSLayoutConstraint.activate([
@@ -101,6 +90,16 @@ class CatsPhotoViewController: UIViewController {
 			catImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 42),
 			catImageView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.8),
 			catImageView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.8)
+		])
+	}
+
+	func setFavoriteButtonConstraints() {
+		favoriteButton.translatesAutoresizingMaskIntoConstraints = false
+		NSLayoutConstraint.activate([
+			favoriteButton.topAnchor.constraint(equalTo: catImageView.bottomAnchor, constant: 20),
+			favoriteButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 42),
+			favoriteButton.heightAnchor.constraint(equalTo: catImageView.heightAnchor, multiplier: 0.1),
+			favoriteButton.widthAnchor.constraint(equalTo: catImageView.widthAnchor, multiplier: 0.15)
 		])
 	}
 }
