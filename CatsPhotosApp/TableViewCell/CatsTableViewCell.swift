@@ -7,7 +7,15 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class CatsTableViewCell: UITableViewCell {
+
+	struct Constant {
+
+		static let rowHeight: CGFloat = 250.0
+		static let cellID: String = "TableViewCellID"
+		static let nibName: String = "TableViewCell"
+
+	}
 
 	@IBOutlet private var cellImageView: UIImageView?
 
