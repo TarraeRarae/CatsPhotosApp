@@ -20,7 +20,7 @@ class UploadViewController: UIViewController {
 
 	func setupTableView() {
 		tableView = UITableView(frame: view.bounds, style: .plain)
-		tableView.register(UINib(nibName: Constants.nibName, bundle: nil), forCellReuseIdentifier: Constants.cellID)
+		tableView.register(UINib(nibName: CatsTableViewCell.Constant.nibName, bundle: nil), forCellReuseIdentifier: CatsTableViewCell.Constant.cellID)
 		tableView.separatorStyle = .none
 		tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 		tableView.dataSource = self
@@ -37,8 +37,8 @@ extension UploadViewController: UITableViewDataSource {
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(
-						withIdentifier: Constants.cellID,
-						for: indexPath) as? TableViewCell else {
+						withIdentifier: CatsTableViewCell.Constant.cellID,
+						for: indexPath) as? CatsTableViewCell else {
 			fatalError("Unable to dequeue reusable cell")
 		}
 		return cell
@@ -49,7 +49,7 @@ extension UploadViewController: UITableViewDataSource {
 extension UploadViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return Constants.rowHeight
+		return CatsTableViewCell.Constant.rowHeight
 	}
 
 }

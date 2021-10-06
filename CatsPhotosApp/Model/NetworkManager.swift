@@ -15,10 +15,16 @@ protocol NetworkCatsManagerDelegate: class {
 
 class NetworkManager {
 
+	struct Constant {
+
+		static let keyAPI: String = "a02aa90b-4743-4822-a934-85f4d3d74de5"
+
+	}
+
 	weak var delegate: NetworkCatsManagerDelegate?
 
 	func getImageWithFilter(_ breed: String) {
-		let urlString = "https://api.thecatapi.com/v1/images/search?breed_ids=\(breed)&limit=10&page=1&api_key=\(Constants.keyAPI)"
+		let urlString = "https://api.thecatapi.com/v1/images/search?api_key=\(NetworkManager.Constant.keyAPI)&sub_id=\(UserDefaults.standard.string(forKey: "subID")!)&breed_ids=\(breed)&limit=10&page=1"
 		guard let url = URL(string: urlString) else { return }
 		let session = URLSession(configuration: .default)
 		let task = session.dataTask(with: url) { (data, _, _) in
