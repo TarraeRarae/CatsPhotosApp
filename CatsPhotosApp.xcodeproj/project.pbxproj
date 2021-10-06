@@ -15,11 +15,11 @@
 		1F1DA47826FF8C2400757C9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DA47626FF8C2400757C9E /* LaunchScreen.storyboard */; };
 		1F1DA48726FF970400757C9E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DA48626FF970400757C9E /* FavoriteViewController.swift */; };
 		1F1DA48E2700911300757C9E /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DA48D2700911300757C9E /* UploadViewController.swift */; };
-		1F1DA491270092AC00757C9E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DA490270092AC00757C9E /* TableViewCell.swift */; };
-		1F1DA494270092CE00757C9E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DA493270092CE00757C9E /* TableViewCell.xib */; };
-		1F1DA49C270108A300757C9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DA49B270108A300757C9E /* Constants.swift */; };
+		1F1DA491270092AC00757C9E /* CatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1DA490270092AC00757C9E /* CatsTableViewCell.swift */; };
+		1F1DA494270092CE00757C9E /* CatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DA493270092CE00757C9E /* CatsTableViewCell.xib */; };
 		1F3E966E2708F91500611AA6 /* CatsPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E966D2708F91500611AA6 /* CatsPhotos.swift */; };
 		1F3E9672270A3CCF00611AA6 /* CatsPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E9671270A3CCF00611AA6 /* CatsPhotoViewController.swift */; };
+		1F43C46C270DB85800FC9D49 /* IsFirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F43C46B270DB85800FC9D49 /* IsFirstLaunch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +33,11 @@
 		1F1DA47926FF8C2400757C9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F1DA48626FF970400757C9E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		1F1DA48D2700911300757C9E /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		1F1DA490270092AC00757C9E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		1F1DA493270092CE00757C9E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		1F1DA49B270108A300757C9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F1DA490270092AC00757C9E /* CatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsTableViewCell.swift; sourceTree = "<group>"; };
+		1F1DA493270092CE00757C9E /* CatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatsTableViewCell.xib; sourceTree = "<group>"; };
 		1F3E966D2708F91500611AA6 /* CatsPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsPhotos.swift; sourceTree = "<group>"; };
 		1F3E9671270A3CCF00611AA6 /* CatsPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsPhotoViewController.swift; sourceTree = "<group>"; };
+		1F43C46B270DB85800FC9D49 /* IsFirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFirstLaunch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +105,8 @@
 		1FFF49CD2707AA2300D080DF /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				1F1DA490270092AC00757C9E /* TableViewCell.swift */,
-				1F1DA493270092CE00757C9E /* TableViewCell.xib */,
+				1F1DA490270092AC00757C9E /* CatsTableViewCell.swift */,
+				1F1DA493270092CE00757C9E /* CatsTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1F1DA46B26FF8C1C00757C9E /* AppDelegate.swift */,
-				1F1DA49B270108A300757C9E /* Constants.swift */,
+				1F43C46B270DB85800FC9D49 /* IsFirstLaunch.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1DA47826FF8C2400757C9E /* LaunchScreen.storyboard in Resources */,
-				1F1DA494270092CE00757C9E /* TableViewCell.xib in Resources */,
+				1F1DA494270092CE00757C9E /* CatsTableViewCell.xib in Resources */,
 				1F1DA47526FF8C2400757C9E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,15 +213,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F3E9672270A3CCF00611AA6 /* CatsPhotoViewController.swift in Sources */,
-				1F1DA491270092AC00757C9E /* TableViewCell.swift in Sources */,
+				1F1DA491270092AC00757C9E /* CatsTableViewCell.swift in Sources */,
 				1F12372C270876580057E43B /* CatsPhotosData.swift in Sources */,
 				1F3E966E2708F91500611AA6 /* CatsPhotos.swift in Sources */,
 				1F1DA48726FF970400757C9E /* FavoriteViewController.swift in Sources */,
+				1F43C46C270DB85800FC9D49 /* IsFirstLaunch.swift in Sources */,
 				1F12372727086DDE0057E43B /* NetworkManager.swift in Sources */,
 				1F1DA48E2700911300757C9E /* UploadViewController.swift in Sources */,
 				1F1DA47026FF8C1C00757C9E /* SearchViewController.swift in Sources */,
 				1F1DA46C26FF8C1C00757C9E /* AppDelegate.swift in Sources */,
-				1F1DA49C270108A300757C9E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

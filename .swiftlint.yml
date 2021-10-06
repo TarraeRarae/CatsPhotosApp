@@ -2,4 +2,4 @@ type_name:
   min_length: 2
 identifier_name:
   min_length: 2
-line_length: 150
+line_length: 200

@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		_ application: UIApplication,
 		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
 	) -> Bool {
+		if UserDefaults.isFirstLaunch() {
+			let subID = UUID().uuidString
+			UserDefaults.standard.setValue(subID, forKey: "subID")
+			UserDefaults.standard.synchronize()
+		}
 		window = UIWindow(frame: UIScreen.main.bounds)
 		let tabBarController = UITabBarController()
 		tabBarController.setViewControllers(getArrayOfViewControllers(), animated: true)
@@ -33,6 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 	func getArrayOfViewControllers() -> [UIViewController] {
 		var arrayOfViewControllers: [UIViewController] = []
+
+		// MARK: - Обязательно к исправлению
+
 		let searchViewController = UINavigationController(rootViewController: SearchViewController())
 		let uploadViewController = UINavigationController(rootViewController: UploadViewController())
 		let favoriteViewController = UINavigationController(rootViewController: FavoriteViewController())
