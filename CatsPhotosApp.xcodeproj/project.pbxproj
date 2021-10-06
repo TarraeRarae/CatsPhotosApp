@@ -19,7 +19,7 @@
 		1F1DA494270092CE00757C9E /* CatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F1DA493270092CE00757C9E /* CatsTableViewCell.xib */; };
 		1F3E966E2708F91500611AA6 /* CatsPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E966D2708F91500611AA6 /* CatsPhotos.swift */; };
 		1F3E9672270A3CCF00611AA6 /* CatsPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E9671270A3CCF00611AA6 /* CatsPhotoViewController.swift */; };
-		1F43C46C270DB85800FC9D49 /* IsFirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F43C46B270DB85800FC9D49 /* IsFirstLaunch.swift */; };
+		1F43C46C270DB85800FC9D49 /* IsFirstLaunchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F43C46B270DB85800FC9D49 /* IsFirstLaunchExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		1F1DA493270092CE00757C9E /* CatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatsTableViewCell.xib; sourceTree = "<group>"; };
 		1F3E966D2708F91500611AA6 /* CatsPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsPhotos.swift; sourceTree = "<group>"; };
 		1F3E9671270A3CCF00611AA6 /* CatsPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsPhotoViewController.swift; sourceTree = "<group>"; };
-		1F43C46B270DB85800FC9D49 /* IsFirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFirstLaunch.swift; sourceTree = "<group>"; };
+		1F43C46B270DB85800FC9D49 /* IsFirstLaunchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFirstLaunchExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1F1DA46B26FF8C1C00757C9E /* AppDelegate.swift */,
-				1F43C46B270DB85800FC9D49 /* IsFirstLaunch.swift */,
+				1F43C46B270DB85800FC9D49 /* IsFirstLaunchExtension.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				1F12372C270876580057E43B /* CatsPhotosData.swift in Sources */,
 				1F3E966E2708F91500611AA6 /* CatsPhotos.swift in Sources */,
 				1F1DA48726FF970400757C9E /* FavoriteViewController.swift in Sources */,
-				1F43C46C270DB85800FC9D49 /* IsFirstLaunch.swift in Sources */,
+				1F43C46C270DB85800FC9D49 /* IsFirstLaunchExtension.swift in Sources */,
 				1F12372727086DDE0057E43B /* NetworkManager.swift in Sources */,
 				1F1DA48E2700911300757C9E /* UploadViewController.swift in Sources */,
 				1F1DA47026FF8C1C00757C9E /* SearchViewController.swift in Sources */,

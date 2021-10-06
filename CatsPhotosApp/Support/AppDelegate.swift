@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			items[itemIndex].image = UIImage(systemName: arrayOfTabBarImagesNames[itemIndex])
 			items[itemIndex].title = tabBarController.viewControllers?[itemIndex].title
 		}
+
 		window?.rootViewController = tabBarController
 		window?.makeKeyAndVisible()
 		return true
