@@ -82,7 +82,7 @@
 			children = (
 				1F12372A270876440057E43B /* Model */,
 				1FFF49CE2707AA3200D080DF /* Support */,
-				1FFF49CD2707AA2300D080DF /* TableViewCell */,
+				1FFF49CD2707AA2300D080DF /* CatsTableViewCell */,
 				1FFF49CB2707A9FF00D080DF /* Controllers */,
 				1F1DA47426FF8C2400757C9E /* Assets.xcassets */,
 				1F1DA47626FF8C2400757C9E /* LaunchScreen.storyboard */,
@@ -102,13 +102,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		1FFF49CD2707AA2300D080DF /* TableViewCell */ = {
+		1FFF49CD2707AA2300D080DF /* CatsTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				1F1DA490270092AC00757C9E /* CatsTableViewCell.swift */,
 				1F1DA493270092CE00757C9E /* CatsTableViewCell.xib */,
 			);
-			path = TableViewCell;
+			path = CatsTableViewCell;
 			sourceTree = "<group>";
 		};
 		1FFF49CE2707AA3200D080DF /* Support */ = {
